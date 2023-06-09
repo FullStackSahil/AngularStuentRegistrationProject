@@ -1,12 +1,13 @@
-import { City } from './../infrastructure/city.interface';
-import { State } from './../infrastructure/state.interface';
+import { Country } from './../infrastructure/country.interface';
+import { City } from '../infrastructure/city.interface';
+import { State } from '../infrastructure/state.interface';
 import { student } from 'src/app/infrastructure/student.interface';
-import { gender } from './../infrastructure/gender.interface';
+import { gender } from '../infrastructure/gender.interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { StudentVM } from '../infrastructure/studentVM.interface';
-import { Country } from '../infrastructure/country.interface';
+
 
 @Injectable({
   providedIn: 'root',
@@ -23,7 +24,7 @@ export class StudentService {
 
   getStudent(id: string): Observable<student> {
     return this.httpClient.get<student>(
-      this.baseApiUrl + '/api/students/GetStudent/' + id
+      this.baseApiUrl + '/api/students/' + id
     );
   }
   getAllGenders(): Observable<gender[]> {
@@ -36,7 +37,12 @@ export class StudentService {
       this.baseApiUrl + '/api/countrystatecity/country'
     );
   }
-
+  setCountry(country:Country): Observable<any> {
+    return this.httpClient.post<any>(
+      this.baseApiUrl + '/api/CountryStateCity/AddCountry',country
+    );
+  }
+ 
   getAllStates(): Observable<State[]> {
     return this.httpClient.get<State[]>(
       this.baseApiUrl + '/api/countrystatecity/state'

@@ -4,7 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { student } from '../infrastructure/student.interface';
-import { StudentService } from './student.service';
+import { StudentService } from '../_services/student.service';
 import { Input } from '@angular/core';
 import { Router, withDebugTracing } from '@angular/router';
 

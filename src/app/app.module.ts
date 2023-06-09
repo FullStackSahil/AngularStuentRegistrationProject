@@ -21,10 +21,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ContactValidationDirective } from './_customvalidation/contact-validation.directive';
-import { EmployeeComponent } from './employee/employee.component';
-import { ViewemployeeComponent } from './employee/viewemployee/viewemployee/viewemployee.component';
-import { LoginComponent } from './login/login.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,9 +28,8 @@ import { LoginComponent } from './login/login.component';
     StudentsComponent,
     ViewstudentComponent,
     ContactValidationDirective,
-    EmployeeComponent,
-    ViewemployeeComponent,
-    LoginComponent,
+
+
   ],
   imports: [
     BrowserModule,

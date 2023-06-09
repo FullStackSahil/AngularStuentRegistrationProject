@@ -1,5 +1,4 @@
-import { EmployeeComponent } from './employee/employee.component';
-import { ViewemployeeComponent } from './employee/viewemployee/viewemployee/viewemployee.component';
+import { CountryComponent } from './country-statecity/country/country.component';
 import { ViewstudentComponent } from './students/ViewStudent/viewstudent/viewstudent.component';
 import { StudentsComponent } from './students/students.component';
 import { NgModule } from '@angular/core';
@@ -10,9 +9,13 @@ const routes: Routes = [
   { path: 'students', component: StudentsComponent },
   { path: 'students/:id', component: ViewstudentComponent },
   { path: 'students/add', component: ViewstudentComponent },
-  { path: 'employees', component: EmployeeComponent },
-  { path: 'employees/:id', component: ViewemployeeComponent },
-  { path: 'employees/add', component: ViewemployeeComponent },
+  { path: 'modules', loadChildren:()=> CountryComponent},
+  {
+    path: 'countrystatecity',
+    loadChildren: () =>
+      import('./country-statecity/country-statecity.module').then((m) => m.CountryStatecityModule),
+  },
+
 ];
 
 @NgModule({

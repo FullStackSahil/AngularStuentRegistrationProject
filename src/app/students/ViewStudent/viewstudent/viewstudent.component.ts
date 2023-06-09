@@ -1,5 +1,5 @@
 import { gender } from './../../../infrastructure/gender.interface';
-import { StudentService } from './../../student.service';
+import { StudentService } from '../../../_services/student.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { student } from 'src/app/infrastructure/student.interface';

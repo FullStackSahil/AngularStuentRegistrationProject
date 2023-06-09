@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Student_Portal_API.Model;
 using System;
 using System.Collections.Generic;
