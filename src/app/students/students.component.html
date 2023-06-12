@@ -30,13 +30,13 @@
     </ng-container>
     <ng-container matColumnDef="birthDate">
       <th mat-header-cell *matHeaderCellDef> BirthDate </th>
-      <td mat-cell *matCellDef="let element"> {{element.birthDate|date}} </td>
+      <td mat-cell *matCellDef="let element"> {{element?.birthDate|date}} </td>
     </ng-container>
 
     <ng-container matColumnDef="address">
       <th mat-header-cell *matHeaderCellDef> Address</th>
-      <td mat-cell *matCellDef="let element"> {{element.address.physicalAddress}},
-        {{element.address.city.name}}, {{element.address.city.state.name}}, {{element.address.city.state.country.name}}
+      <td mat-cell *matCellDef="let element"> {{element?.address?.physicalAddress}},
+        {{element?.address?.city?.name}}, {{element.address?.city?.state?.name}}, {{element?.address?.city?.state?.country?.name}}
       </td>
     </ng-container>
 

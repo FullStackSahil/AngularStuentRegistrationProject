@@ -18,5 +18,14 @@ namespace Student_Portal_API.service
         Task<Country> AddCountry(Country country);
         Task<State> AddState(State ste);
         Task<City> AddCity(City city);
+        Task<bool> StateExists(int id);
+        Task<bool> CountryExists(int id);
+        Task<bool> CityExists(int id);
+        Task<bool>RemoveStateAsync(int id);
+        Task<bool>RemoveCountryAsync(int id);
+        Task<bool>RemoveCityAsync(int id);
+        Task<State> GetStateAsync(int id);
+        Task<Country> GetCountryAsync(int id);
+        Task<City> GetCityAsync(int id);
   }
 }

@@ -1,5 +1,30 @@
-<!-- <div class="container mat-elevation-z8">
-  <table mat-table matSort [dataSource]="SateDataSource" class="mat-elevation-z8">
+<!-- save -->
+<div style="margin-top: 1%;" >
+
+  <div class="row">
+    <div class="col-xs-4">
+      <mat-form-field appearance="outline">
+        <mat-label>Country</mat-label>
+        <mat-select name="country" [(ngModel)]="newState.countryId" (ngModelChange)="onCountrySelected($event)" required>
+          <mat-option *ngFor="let country of CountryList" [value]="country.id">
+            {{country.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+    <div *ngIf="countryEntered" class="col-xs-4">
+      <mat-form-field appearance="outline">
+        <mat-label>State Name</mat-label>
+        <input type="text" matInput [(ngModel)]="newState.name" (ngModelChange)="onStateEntered($event)" required>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" (click)="SaveClick()" *ngIf="stateEntered" class="col-xs-2">
+      Save
+    </button>
+</div>
+<div class="container mat-elevation-z8">
+  <table mat-table matSort [dataSource]="StateDataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="Name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
@@ -8,8 +33,8 @@
     <ng-container matColumnDef="edit">
       <th mat-header-cell *matHeaderCellDef> Edit</th>
       <td mat-cell *matCellDef="let element">
-        <a [routerLink]="['/country',element.id]">
-          <mat-icon>edit</mat-icon>
+        <a (click)="Delete(element.id)" style="cursor:pointer;">
+          <mat-icon>delete</mat-icon>
         </a>
 
       </td>
@@ -20,30 +45,4 @@
   </table>
   <mat-paginator [length]="100" [pageSize]="15" [pageSizeOptions]="[5, 10,15, 25, 50]" aria-label="Select page">
   </mat-paginator>
-</div> -->
-
-<!-- save -->
-<div class="row">
-  <div class="col-xs-12">
-    <mat-form-field appearance="outline">
-      <mat-label>Country</mat-label>
-      <mat-select name="country" [(ngModel)]="newState.countryId" (ngModelChange)="onCountrySelected($event)">
-        <mat-option *ngFor="let country of CountryList" [value]="country.id">
-          {{country.name}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
 </div>
-<div *ngIf="countryEntered">
-
-  <mat-form-field appearance="outline">
-    <mat-label>State Name</mat-label>
-    <input type="text" matInput [(ngModel)]="newState.name" (ngModelChange)="onStateEntered($event)">
-  </mat-form-field>
-</div>
-
-
-<button mat-raised-button color="primary" (click)="SaveClick()" *ngIf="stateEntered">
-  Save
-</button>

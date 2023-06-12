@@ -33,7 +33,7 @@ namespace Student_Portal_API.Controllers
       return Ok(await _studentRepository.GetAllStudentsAsync());
     }
     //[Route("[action]/{id:int}")]
-    [HttpGet("{id:int}")]
+    [HttpGet("GetStudent/{id:int}")]
     public async Task<IActionResult> GetStudent(int id)
     {
       //return Ok(await _context.Students.Where(x => x.Id == id).Include(nameof(Gender)).Include(nameof(Address)).FirstOrDefaultAsync());

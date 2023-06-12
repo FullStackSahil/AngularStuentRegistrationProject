@@ -180,62 +180,67 @@ C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\obj\Debug\net5.0\Student_
 C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\obj\Debug\net5.0\refint\Student_Portal_API.dll
 C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.genruntimeconfig.cache
 C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\obj\Debug\net5.0\ref\Student_Portal_API.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\appsettings.Development.json
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\appsettings.json
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.exe
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.deps.json
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.runtimeconfig.json
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.runtimeconfig.dev.json
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\ref\Student_Portal_API.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.pdb
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Humanizer.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.Identity.Client.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.OpenApi.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Newtonsoft.Json.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\System.Runtime.Caching.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.csproj.AssemblyReference.cache
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.GeneratedMSBuildEditorConfig.editorconfig
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.AssemblyInfoInputs.cache
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.AssemblyInfo.cs
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.csproj.CoreCompileInputs.cache
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.MvcApplicationPartsAssemblyInfo.cs
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.MvcApplicationPartsAssemblyInfo.cache
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\staticwebassets\Student_Portal_API.StaticWebAssets.Manifest.cache
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\staticwebassets\Student_Portal_API.StaticWebAssets.xml
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\scopedcss\bundle\Student_Portal_API.styles.css
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.RazorTargetAssemblyInfo.cache
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.csproj.CopyComplete
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\ref\Student_Portal_API.dll
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.pdb
-K:\Angular\VineForceProject\vineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.genruntimeconfig.cache
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\appsettings.Development.json
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\appsettings.json
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.StaticWebAssets.xml
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.exe
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.deps.json
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.runtimeconfig.json
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.runtimeconfig.dev.json
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Student_Portal_API.pdb
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Humanizer.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.csproj.AssemblyReference.cache
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.AssemblyInfoInputs.cache
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.AssemblyInfo.cs
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.csproj.CoreCompileInputs.cache
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\scopedcss\bundle\Student_Portal_API.styles.css
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\staticwebassets\Student_Portal_API.StaticWebAssets.Manifest.cache
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\staticwebassets\Student_Portal_API.StaticWebAssets.Pack.cache
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\staticwebassets\msbuild.Student_Portal_API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\staticwebassets\msbuild.build.Student_Portal_API.props
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.Student_Portal_API.props
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.Student_Portal_API.props
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.RazorTargetAssemblyInfo.cache
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.csproj.CopyComplete
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\refint\Student_Portal_API.dll
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.pdb
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.genruntimeconfig.cache
+C:\Sahil\Angular Field\VineForceProject\Student_Portal_API\obj\Debug\net5.0\ref\Student_Portal_API.dll

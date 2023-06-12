@@ -15,7 +15,7 @@ import { State } from 'src/app/infrastructure/state.interface';
 })
 export class StateComponent implements OnInit {
   CountryList: Country[] = [];
-
+  StateList: State[] = [];
   newState = {
     id: 0,
     name: '',
@@ -26,6 +26,7 @@ export class StateComponent implements OnInit {
 
   displayedColumns: string[] = ['Name', 'edit'];
   CountryDataSource: MatTableDataSource<any> = new MatTableDataSource<any>();
+  StateDataSource: MatTableDataSource<any> = new MatTableDataSource<any>();
   @ViewChild(MatPaginator) matPaginator!: MatPaginator;
   @ViewChild(MatSort) matSort!: MatSort;
   FilterText: string = '';
@@ -41,14 +42,6 @@ export class StateComponent implements OnInit {
       (data) => {
         console.log(data);
         this.CountryList = data;
-        this.CountryDataSource = new MatTableDataSource<any>(data);
-        if (this.matPaginator) {
-          this.CountryDataSource.paginator = this.matPaginator;
-        }
-        if (this.matSort) {
-          this.CountryDataSource.sort = this.matSort;
-        }
-        // console.log(this.students);
       },
       (error) => {
         console.log(error);
@@ -56,7 +49,19 @@ export class StateComponent implements OnInit {
     );
   }
   onCountrySelected(countryId: number) {
-    this.countryEntered = true;
+    this.countryEntered = countryId ? true : false;
+    this.CountryStateCityServiceService.getStateOnSelectedCountry(
+      countryId
+    ).subscribe(
+      (response) => {
+        this.StateList = response;
+        console.log(response);
+        this.StateDataSource = new MatTableDataSource<any>(response);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
   onStateEntered(state: any) {
     //console.warn(state);
@@ -72,10 +77,24 @@ export class StateComponent implements OnInit {
         this.snackBar.open('State Added Successfully', undefined, {
           duration: 3000,
         });
+        this.onCountrySelected(this.newState.countryId);
       },
       (e) => {
         console.log(e);
       }
     );
+  }
+  Delete(id:number){
+    // alert(id + ' deleted');
+    let confirm= window.confirm('Are you sure you want to delete');
+    if (confirm){
+      this.CountryStateCityServiceService.deleteState(id).subscribe(
+        (res) =>{
+        console.log(res);
+      this.snackBar.open("State Deleted Successfully ",undefined,{duration:3000,});
+      this.onCountrySelected(this.newState.countryId);
+
+    },(e)=>{this.snackBar.open("Not Deleted",undefined,{duration:3000,})});
+    }
   }
 }

@@ -29,6 +29,15 @@ export class CountryStateCityServiceService {
       state
     );
   }
+  deleteCountry(countryid:number): Observable<any> {
+    return this.httpClient.delete<any>(this.baseApiUrl + '/api/countrystatecity/DeleteCountry/'+countryid);
+  }
+  deleteState(stateId:number): Observable<any> {
+    return this.httpClient.delete<any>(this.baseApiUrl + '/api/countrystatecity/DeleteState/'+stateId);
+  }
+  deleteCity(cityId:number): Observable<any> {
+    return this.httpClient.delete<any>(this.baseApiUrl + '/api/countrystatecity/DeleteCity/'+cityId);
+  }
 
   getAllStates(): Observable<State[]> {
     return this.httpClient.get<State[]>(

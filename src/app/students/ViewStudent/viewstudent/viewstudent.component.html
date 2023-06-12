@@ -37,8 +37,7 @@
           <div class="col-xs-6">
             <mat-form-field appearance="outline">
               <mat-label>Contact</mat-label>
-              <input type="text" matInput [(ngModel)]="studentData.contact" name="contact" #contact="ngModel"
-                appContactValidation [class.is-invalid]="(contact.touched || contact.dirty) && contact.errors">
+              <input type="text" matInput [(ngModel)]="studentData.contact" name="contact" #contact="ngModel" required>
             </mat-form-field>
           </div>
         </div>
@@ -48,7 +47,7 @@
             <mat-form-field appearance="outline">
               <mat-label>BirthDate</mat-label>
               <input matInput [matDatepicker]="picker" min="" max="" [(ngModel)]="studentData.birthDate"
-                name="birthdate">
+                name="birthdate" required>
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -60,7 +59,7 @@
             <mat-form-field appearance="outline">
               <mat-label>PhysicalAddress</mat-label>
               <textarea type="text" matInput [(ngModel)]="studentData.address.physicalAddress"
-                name="physicalAddress"></textarea>
+                name="physicalAddress" required></textarea>
             </mat-form-field>
           </div>
         </div>
@@ -69,7 +68,7 @@
           <div class="col-xs-12">
             <mat-form-field appearance="outline">
               <mat-label>Postal Code</mat-label>
-              <input type="text" matInput [(ngModel)]="studentData.address.postalCode" name="postalCode">
+              <input type="text" matInput [(ngModel)]="studentData.address.postalCode" name="postalCode" required>
             </mat-form-field>
           </div>
         </div>
@@ -79,7 +78,7 @@
           <div class="col-xs-12">
             <mat-form-field appearance="outline">
               <mat-label>Gender</mat-label>
-              <mat-select [(ngModel)]="studentData.genderId" name="gender">
+              <mat-select [(ngModel)]="studentData.genderId" name="gender" required>
                 <mat-option *ngFor="let item of GenderList" [value]="item.id">
                   {{item.title}}
                 </mat-option>
@@ -94,7 +93,7 @@
             <mat-form-field appearance="outline">
               <mat-label>Country</mat-label>
               <mat-select name="country" [(ngModel)]="studentData.address.city.state.country.id"
-                (ngModelChange)="onCountrySelected($event)">
+                (ngModelChange)="onCountrySelected($event)" required>
                 <mat-option *ngFor="let country of CountryList" [value]="country.id">
                   {{country.name}}
                 </mat-option>
@@ -109,7 +108,7 @@
             <mat-form-field appearance="outline">
               <mat-label>State</mat-label>
               <mat-select name="state" [(ngModel)]="studentData.address.city.state.id"
-                (ngModelChange)="onStateSelected($event)">
+                (ngModelChange)="onStateSelected($event)" required>
                 <mat-option *ngFor="let state of StateList" [value]="state.id">
                   {{state.name}}
                 </mat-option>
@@ -122,12 +121,16 @@
           <div class="col-xs-12">
             <mat-form-field appearance="outline">
               <mat-label>City</mat-label>
-              <mat-select name="city" [(ngModel)]="studentData.address.cityId">
+              <mat-select matInput name="city" [(ngModel)]="studentData.address.cityId" #city="ngModel"
+                [ngClass]="{ 'is-invalid': studentForm.submitted && city.invalid }" required>
                 <mat-option *ngFor="let city of CityList" [value]="city.id">
                   {{city.name}}
                 </mat-option>
               </mat-select>
+
+
             </mat-form-field>
+           
           </div>
         </div>
 
@@ -137,7 +140,8 @@
           </div>
 
           <div class="col-xs-12" *ngIf="isNew==true">
-            <button mat-raised-button color="primary" type="submit" (click)="SaveClick()">Save</button>
+            <button mat-raised-button color="primary" [disabled]="!studentForm.valid" type="submit"
+              (click)="SaveClick()">Save</button>
           </div>
 
         </div>
