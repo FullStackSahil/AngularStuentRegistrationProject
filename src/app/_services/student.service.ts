@@ -8,7 +8,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { StudentVM } from '../infrastructure/studentVM.interface';
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -16,6 +15,7 @@ export class StudentService {
   private baseApiUrl = 'https://localhost:44380';
 
   constructor(private httpClient: HttpClient) {}
+
   getAllStudents(): Observable<student[]> {
     return this.httpClient.get<student[]>(
       this.baseApiUrl + '/api/students/GetAllStudents'
@@ -24,7 +24,7 @@ export class StudentService {
 
   getStudent(id: string): Observable<student> {
     return this.httpClient.get<student>(
-      this.baseApiUrl + '/api/students/' + id
+      this.baseApiUrl + '/api/students/GetStudent/' + id
     );
   }
   getAllGenders(): Observable<gender[]> {
@@ -37,12 +37,13 @@ export class StudentService {
       this.baseApiUrl + '/api/countrystatecity/country'
     );
   }
-  setCountry(country:Country): Observable<any> {
+  setCountry(country: Country): Observable<any> {
     return this.httpClient.post<any>(
-      this.baseApiUrl + '/api/CountryStateCity/AddCountry',country
+      this.baseApiUrl + '/api/CountryStateCity/AddCountry',
+      country
     );
   }
- 
+
   getAllStates(): Observable<State[]> {
     return this.httpClient.get<State[]>(
       this.baseApiUrl + '/api/countrystatecity/state'
@@ -74,7 +75,7 @@ export class StudentService {
       contact: stu.contact,
       genderId: stu.genderId,
       cityId: stu.address.cityId,
-      profileImage:stu.profileImage,
+      profileImage: stu.profileImage,
       physicalAddress: stu.address.physicalAddress,
       postalCode: stu.address.postalCode,
     };
@@ -96,7 +97,7 @@ export class StudentService {
       contact: stu.contact,
       genderId: stu.genderId,
       cityId: stu.address.cityId,
-      profileImage:stu.profileImage,
+      profileImage: stu.profileImage,
       physicalAddress: stu.address.physicalAddress,
       postalCode: stu.address.postalCode,
     };

@@ -43,7 +43,7 @@ export class StudentsComponent implements OnInit {
     this.studentService.getAllStudents().subscribe(
       (studentData) => {
         this.students = studentData;
-        console.log(studentData)
+        console.log(studentData);
         this.dataSource = new MatTableDataSource<student>(studentData);
         if (this.matPaginator) {
           this.dataSource.paginator = this.matPaginator;
@@ -67,7 +67,7 @@ export class StudentsComponent implements OnInit {
     this.studentService.deleteStudent(id).subscribe(
       (response) => {
         this.snackBar.open('Student Deleted', undefined, { duration: 2000 });
-         this.getAll();
+        this.getAll();
       },
       (error) => {
         console.log(error);

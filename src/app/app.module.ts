@@ -28,8 +28,6 @@ import { ContactValidationDirective } from './_customvalidation/contact-validati
     StudentsComponent,
     ViewstudentComponent,
     ContactValidationDirective,
-
-
   ],
   imports: [
     BrowserModule,

@@ -25,12 +25,7 @@ namespace Student_Portal_API.Controllers
     {
       return Ok(await _countryStateCityRepository.GetAllCountryAsync());
     }
-    [HttpPost("AddCountry")]
-    //[Route("[action]")]
-    public async Task<IActionResult> AddCountry(Country country)
-    {
-      return Ok(await _countryStateCityRepository.AddCountry(country));
-    }
+    
     //[Route("[action]")]
     [HttpGet("State")]
 
@@ -38,12 +33,7 @@ namespace Student_Portal_API.Controllers
     {
       return Ok(await _countryStateCityRepository.GetAllStatesAsync());
     }
-    [HttpPost("AddState")]
-    //[Route("[action]")]
-    public async Task<IActionResult> AddState(State state)
-    {
-      return Ok(await _countryStateCityRepository.AddState(state));
-    }
+    
     //[Route("[action]")]
     [HttpGet("City")]
 
@@ -52,12 +42,7 @@ namespace Student_Portal_API.Controllers
       return Ok(await _countryStateCityRepository.GetAllCitiesAsync());
     }
 
-    [HttpPost("AddCity")]
-    //[Route("[action]")]
-    public async Task<IActionResult> AddCity(City city)
-    {
-      return Ok(await _countryStateCityRepository.AddCity(city));
-    }
+    
     //[Route("[action]/{id:int}")]
     [HttpGet("StateByCountryId/{id:int}")]
 
@@ -72,6 +57,25 @@ namespace Student_Portal_API.Controllers
     public async Task<IActionResult> CityByStateId(int id)
     {
       return Ok(await _countryStateCityRepository.GetCityByStateIdAsync(id));
+    }
+
+    [HttpPost("AddCountry")]
+    //[Route("[action]")]
+    public async Task<IActionResult> AddCountry(Country country)
+    {
+      return Ok(await _countryStateCityRepository.AddCountry(country));
+    }
+    [HttpPost("AddState")]
+    //[Route("[action]")]
+    public async Task<IActionResult> AddState(State state)
+    {
+      return Ok(await _countryStateCityRepository.AddState(state));
+    }
+    [HttpPost("AddCity")]
+    //[Route("[action]")]
+    public async Task<IActionResult> AddCity(City city)
+    {
+      return Ok(await _countryStateCityRepository.AddCity(city));
     }
 
 
