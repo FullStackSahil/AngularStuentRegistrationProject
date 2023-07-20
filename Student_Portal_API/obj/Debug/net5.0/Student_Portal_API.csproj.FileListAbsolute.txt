@@ -180,3 +180,17 @@ C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\obj\Debug\net5.0\Student_
 C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\obj\Debug\net5.0\refint\Student_Portal_API.dll
 C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\obj\Debug\net5.0\Student_Portal_API.genruntimeconfig.cache
 C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\obj\Debug\net5.0\ref\Student_Portal_API.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\Namotion.Reflection.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\NJsonSchema.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\NJsonSchema.Yaml.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\NSwag.Annotations.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\NSwag.AspNetCore.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\NSwag.Core.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\NSwag.Core.Yaml.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\NSwag.Generation.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\NSwag.Generation.AspNetCore.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\YamlDotNet.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\EPPlus.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\EPPlus.Interfaces.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\EPPlus.System.Drawing.dll
+C:\Sahil\Angular Field\Angular_1630\Student_Portal_API\bin\Debug\net5.0\Microsoft.IO.RecyclableMemoryStream.dll

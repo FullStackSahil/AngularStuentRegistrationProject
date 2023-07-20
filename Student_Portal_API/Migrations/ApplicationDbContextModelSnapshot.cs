@@ -99,6 +99,26 @@ namespace Student_Portal_API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Genders");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Straight",
+                            Title = "Male"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Straight",
+                            Title = "Female"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "LGBT",
+                            Title = "Other"
+                        });
                 });
 
             modelBuilder.Entity("Student_Portal_API.Model.State", b =>

@@ -19,8 +19,8 @@ namespace Student_Portal_API.Controllers
     {
       _countryStateCityRepository = countryStateCityRepository;
     }
-    [HttpGet("Country")]
-    //[Route("[action]")]
+    [HttpGet]
+    [Route("[action]")]
     public async Task<IActionResult> Country()
     {
       return Ok(await _countryStateCityRepository.GetAllCountryAsync());
@@ -73,7 +73,44 @@ namespace Student_Portal_API.Controllers
     {
       return Ok(await _countryStateCityRepository.GetCityByStateIdAsync(id));
     }
+    [HttpDelete("DeleteState/{id:int}")]
+    //[Route("[action]/{id:int}")]
+    public async Task<IActionResult> DeleteState([FromRoute] int id)
+    {
+      if (await _countryStateCityRepository.StateExists(id))
+      {
+        var deleteStudent = await _countryStateCityRepository.RemoveStateAsync(id);
+        if (deleteStudent != false)
+          return Ok();
+      }
+      return NotFound();
 
+    }
+    [HttpDelete("DeleteCountry/{id:int}")]
+    //[Route("[action]/{id:int}")]
+    public async Task<IActionResult> DeleteCountry([FromRoute] int id)
+    {
+      if (await _countryStateCityRepository.CountryExists(id))
+      {
+        var deleteStudent = await _countryStateCityRepository.RemoveCountryAsync(id);
+        if (deleteStudent != false)
+          return Ok();
+      }
+      return NotFound();
 
+    }
+    [HttpDelete("DeleteCity/{id:int}")]
+    //[Route("[action]/{id:int}")]
+    public async Task<IActionResult> DeleteCity([FromRoute] int id)
+    {
+      if (await _countryStateCityRepository.CityExists(id))
+      {
+        var deleteStudent = await _countryStateCityRepository.RemoveCityAsync(id);
+        if (deleteStudent != false)
+          return Ok();
+      }
+      return NotFound();
+
+    }
   }
 }

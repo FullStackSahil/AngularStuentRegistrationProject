@@ -24,7 +24,7 @@ export class StudentService {
 
   getStudent(id: string): Observable<student> {
     return this.httpClient.get<student>(
-      this.baseApiUrl + '/api/students/' + id
+      this.baseApiUrl + '/api/students/getstudent/' + id
     );
   }
   getAllGenders(): Observable<gender[]> {

@@ -50,11 +50,13 @@ namespace Student_Portal_API
           });
 
       });
+      services.AddOpenApiDocument();
+      //services.AddSwaggerDocument();
       services.AddSwaggerGen(c =>
       {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "Student_Portal_API", Version = "v1" });
-      });
-      services.AddControllers();
+      });     
+      services.AddControllers();     
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,7 +65,9 @@ namespace Student_Portal_API
       if (env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
-        app.UseSwagger();
+
+        app.UseOpenApi();
+        app.UseSwaggerUi3();
         app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Student_Portal_API v1"));
       }
       app.UseCors("angularApplication");

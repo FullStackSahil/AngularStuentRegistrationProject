@@ -18,11 +18,11 @@ namespace Student_Portal_API.Controllers
   public class StudentsController : ControllerBase
   {
     internal readonly IStudentRepository _studentRepository;
-    private readonly ApplicationDbContext _context;
+    //private readonly ApplicationDbContext _context;
     public StudentsController(IStudentRepository studentRepository, ApplicationDbContext context)
     {
       _studentRepository = studentRepository;
-      _context = context;
+      //_context = context;
     }
 
     //[Route("[action]")]
@@ -33,7 +33,7 @@ namespace Student_Portal_API.Controllers
       return Ok(await _studentRepository.GetAllStudentsAsync());
     }
     //[Route("[action]/{id:int}")]
-    [HttpGet("{id:int}")]
+    [HttpGet("GetStudent/{id:int}")]
     public async Task<IActionResult> GetStudent(int id)
     {
       //return Ok(await _context.Students.Where(x => x.Id == id).Include(nameof(Gender)).Include(nameof(Address)).FirstOrDefaultAsync());

@@ -93,5 +93,80 @@ namespace Student_Portal_API.service
       var state = await _context.States.Include(x => x.Country).Where(x => x.CountryId == countryId).ToListAsync();
       return state;
     }
+    public async Task<State> GetStateAsync(int id)
+    {
+      return await _context.States.Where(x => x.Id == id).Include(nameof(Country)).FirstOrDefaultAsync();
+    }
+    public async Task<bool> RemoveStateAsync(int id)
+    {
+      try
+      {
+        var state = await GetStateAsync(id);
+        _context.States.Remove(state);
+        _context.SaveChanges();
+        return true;
+      }
+      catch (Exception)
+      {
+
+        return false;
+      }
+
+    }
+    public async Task<bool> StateExists(int id)
+    {
+      return await _context.States.AnyAsync(x => x.Id == id);
+    }
+
+    public async Task<Country> GetCountryAsync(int id)
+    {
+      return await _context.Countries.Where(x => x.Id == id).FirstOrDefaultAsync();
+    }
+
+    public async Task<City> GetCityAsync(int id)
+    {
+      return await _context.Cities.Where(x => x.Id == id).Include(x => x.State).Include(x=>x.State.Country).FirstOrDefaultAsync();
+    }
+
+    public async Task<bool> RemoveCountryAsync(int id)
+    {
+      try
+      {
+        var country = await GetCountryAsync(id);
+        _context.Countries.Remove(country);
+        _context.SaveChanges();
+        return true;
+      }
+      catch (Exception)
+      {
+        return false;
+      }
+    }
+
+    public async Task<bool> RemoveCityAsync(int id)
+    {
+      try
+      {
+        var city = await GetCityAsync(id);
+        _context.Cities.Remove(city);
+        _context.SaveChanges();
+        return true;
+      }
+      catch (Exception)
+      {
+        return false;
+      }
+    }
+
+    public async Task<bool> CountryExists(int id)
+    {
+      return await _context.Countries.AnyAsync(x=>x.Id==id);
+    }
+
+    public async Task<bool> CityExists(int id)
+    {
+      return await _context.Cities.AnyAsync(x=>x.Id==id);
+    }
   }
+
 }
