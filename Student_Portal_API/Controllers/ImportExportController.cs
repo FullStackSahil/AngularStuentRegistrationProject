@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using OfficeOpenXml;
+using System;
 using System.Data;
 using System.IO;
 using System.Threading.Tasks;
@@ -40,7 +41,7 @@ namespace Student_Portal_API.Controllers
     private async Task ProcessExcelData(string filePath)
     {
       using (ExcelPackage package= new ExcelPackage(new FileInfo(filePath)))
-      {
+      {       
         ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
         int rows = worksheet.Dimension.Rows;
         int columns = worksheet.Dimension.Columns;
@@ -71,36 +72,10 @@ namespace Student_Portal_API.Controllers
         }
       }
     }
-    
+
+
+   
+
   }
 }
-public static class ExcelExtensions
-{
-  public static DataTable ToDataTable(this ExcelWorksheet worksheet, bool hasHeaderRow = true)
-  {
-    var dataTable = new DataTable();
 
-    var startRow = hasHeaderRow ? 2 : 1;
-    var startColumn = 1;
-
-    foreach (var headerCell in worksheet.Cells[startRow - 1, startColumn, startRow - 1, worksheet.Dimension.End.Column])
-    {
-      dataTable.Columns.Add(hasHeaderRow ? headerCell.Text : $"Column {headerCell.Start.Column}");
-    }
-
-    for (var rowNum = startRow; rowNum <= worksheet.Dimension.End.Row; rowNum++)
-    {
-      var row = worksheet.Cells[rowNum, startColumn, rowNum, worksheet.Dimension.End.Column];
-      var dataRow = dataTable.NewRow();
-
-      foreach (var cell in row)
-      {
-        dataRow[cell.Start.Column - startColumn] = cell.Text;
-      }
-
-      dataTable.Rows.Add(dataRow);
-    }
-
-    return dataTable;
-  }
-}

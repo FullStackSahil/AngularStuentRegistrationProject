@@ -1,11 +1,15 @@
+using ClosedXML.Excel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using OfficeOpenXml;
+using Student_Portal_API.service;
 using System;
 using System.Data;
 using System.IO;
+using System.Linq;
+using System.Numerics;
 
 namespace Student_Portal_API.Controllers
 {
@@ -49,7 +53,7 @@ namespace Student_Portal_API.Controllers
         return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "export.xlsx");
       }
     }
-    public static DataSet GetContractsAndLaborCategories(string _connectionString)
+    private DataSet GetContractsAndLaborCategories(string _connectionString)
     {
       using (var connection = new SqlConnection(_connectionString))
       {
@@ -69,9 +73,31 @@ namespace Student_Portal_API.Controllers
       }
     }
 
-    
+    private void ProcessFileWithXML(IFormFile file)
+    {
+      using var stream = file.OpenReadStream();
+      using (var workbook = new XLWorkbook(stream))
+      {
+        var contractBasicInfoSheet = workbook.Worksheet("Contract Basic Info");
+        var laborCategorySheet = workbook.Worksheet("Labour Category");
 
-    [HttpPost]
+        using (var connection = new SqlConnection(_connectionString))
+        {
+          connection.Open();
+
+          // Process Contract Basic Info sheet
+          var contractBasicInfoTable = ExcelProcessREpository.GetDataTableFromWorksheet(contractBasicInfoSheet);
+          ExcelProcessREpository.SaveDataTableToDatabase(contractBasicInfoTable, "_sahilContracts", connection);
+
+          // Process Labor Category sheet
+          var laborCategoryTable = ExcelProcessREpository.GetDataTableFromWorksheet(laborCategorySheet);
+          ExcelProcessREpository.SaveDataTableToDatabase(laborCategoryTable, "_sahilLaborCategories", connection);
+        }
+      }
+    }
+
+
+     [HttpPost]
     public IActionResult Upload(IFormFile file)
     {
       try
@@ -82,7 +108,7 @@ namespace Student_Portal_API.Controllers
         }
 
         // Process the uploaded file using ExcelService
-        ProcessFile(file);
+        ProcessFileWithXML(file);
 
         return Ok();
       }
@@ -93,9 +119,6 @@ namespace Student_Portal_API.Controllers
     }
     private void ProcessFile(IFormFile file)
     {
-     
-
-      
       using (var package = new ExcelPackage(file.OpenReadStream()))
       {
         var workbook = package.Workbook;
@@ -108,57 +131,14 @@ namespace Student_Portal_API.Controllers
 
           // Process Contract Basic Info sheet
           var contractBasicInfoTable = contractBasicInfoSheet.ToDataTable(true);
-          SaveDataTableToDatabase(contractBasicInfoTable, "_sahilContracts", connection);
-
+          ExcelProcessREpository.SaveDataTableToDatabase(contractBasicInfoTable, "_sahilContracts", connection);
           // Process Labor Category sheet
           var laborCategoryTable = laborCategorySheet.ToDataTable(true);
-          SaveDataTableToDatabase(laborCategoryTable, "_sahilLaborCategories", connection);
+          ExcelProcessREpository.SaveDataTableToDatabase(laborCategoryTable, "_sahilLaborCategories", connection);
+
         }
       }
-    }
-
-    private static void SaveDataTableToDatabase(DataTable dataTable, string tableName, SqlConnection connection)
-    {
-      using (var bulkCopy = new SqlBulkCopy(connection))
-      {
-        bulkCopy.DestinationTableName = tableName;
-        bulkCopy.WriteToServer(dataTable);
-      }
-    }
+    }   
   }
-
-  public static class ExcelExtensions
-  {
-    public static DataTable ToDataTable(this ExcelWorksheet worksheet, bool hasHeaderRow = true)
-    {
-      var dataTable = new DataTable();
-
-      var startRow = hasHeaderRow ? 2 : 1;
-      var startColumn = 1;
-
-      foreach (var headerCell in worksheet.Cells[startRow - 1, startColumn, startRow - 1, worksheet.Dimension.End.Column])
-      {
-        dataTable.Columns.Add(hasHeaderRow ? headerCell.Text : $"Column {headerCell.Start.Column}");
-      }
-
-      for (var rowNum = startRow; rowNum <= worksheet.Dimension.End.Row; rowNum++)
-      {
-        var row = worksheet.Cells[rowNum, startColumn, rowNum, worksheet.Dimension.End.Column];
-        var dataRow = dataTable.NewRow();
-
-        foreach (var cell in row)
-        {
-          dataRow[cell.Start.Column - startColumn] = cell.Text;
-        }
-
-        dataTable.Rows.Add(dataRow);
-      }
-
-      return dataTable;
-    }
-   
-
-  }
-
 
 }
